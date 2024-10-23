@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="mainbody">
+        <div class="resultarea">
+            <input type="text" id="callinput" name="display">
+        </div>
+        <div class="wholebutton">
+            <div class="row1">
+                <button onclick=ac()>AC</button>
+                <button onclick=del()>DEL</button>
+                <button onclick="callinput.value+='%'">%</button>
+                <button onclick="callinput.value+='/'">/</button>
+            </div>
+            <div class="row">
+                <button onclick="callinput.value+='7'">7</button>
+                <button onclick="callinput.value+='8'">8</button>
+                <button onclick="callinput.value+='9'">9</button>
+                <button class="special" onclick="callinput.value+='*'">*</button>
+            </div>
+            <div class="row">
+                <button onclick="callinput.value+='4'">4</button>
+                <button onclick="callinput.value+='5'">5</button>
+                <button onclick="callinput.value+='6'">6</button>
+                <button class="special" onclick="callinput.value+='-'">-</button>
+            </div>
+            <div class="row">
+                <button onclick="callinput.value+='1'">1</button>
+                <button onclick="callinput.value+='2'">2</button>
+                <button onclick="callinput.value+='3'">3</button>
+                <button class="special" onclick="callinput.value+='+'">+</button>
+            </div>
+            <div class="row">
+                <button onclick="callinput.value+='0'">0</button>
+                <button onclick="callinput.value+='00'">00</button>
+                <button onclick="callinput.value+='.'">.</button>
+                <button class="special" onclick=eval1()>=</button>
+            </div>
+        </div>
+        <div class="promotion">
+            <h3>Made By Aditya <i class="fa-regular fa-face-smile"></i> </h3>
+        </div>
+    </div>
+    <script>
+        let display= document.getElementById("callinput");
+        function del(){
+            display.value=display.value.slice(0,-1)
+        }
+        function ac(){
+            display.value=""
+        }
+        function eval1(){
+            display.value=eval(display.value)
+        }
+    </script>
+</body>
+</html>
